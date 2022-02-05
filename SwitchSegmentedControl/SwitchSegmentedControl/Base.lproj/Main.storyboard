@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwitchSegmentedControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QIV-aN-Qdi">
+                                <rect key="frame" x="170.66666666666666" y="168" width="51" height="31"/>
+                                <color key="onTintColor" systemColor="systemPinkColor"/>
+                                <color key="thumbTintColor" red="0.0032251161040000001" green="1" blue="0.15293823870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="switchStatus:" destination="BYZ-38-t0r" eventType="valueChanged" id="wtq-7J-q7T"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dho-RY-LeG">
+                                <rect key="frame" x="161.66666666666666" y="464" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xTk-Zr-joH"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Byt-nH-XYe">
+                                <rect key="frame" x="141.66666666666666" y="332" width="107" height="32"/>
+                                <segments>
+                                    <segment title="Open"/>
+                                    <segment title="Close"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedChangeControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="peT-O5-l1n"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dho-RY-LeG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="86Z-P9-zRG"/>
+                            <constraint firstItem="QIV-aN-Qdi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AQQ-Gd-e09"/>
+                            <constraint firstItem="Byt-nH-XYe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CUx-KW-K55"/>
+                            <constraint firstItem="Byt-nH-XYe" firstAttribute="top" secondItem="QIV-aN-Qdi" secondAttribute="bottom" constant="133" id="DVn-jK-pAp"/>
+                            <constraint firstItem="QIV-aN-Qdi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="124" id="KWO-HA-nNi"/>
+                            <constraint firstItem="dho-RY-LeG" firstAttribute="top" secondItem="Byt-nH-XYe" secondAttribute="bottom" constant="101" id="qfR-PV-xnC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentedControl" destination="Byt-nH-XYe" id="qe8-dj-3gf"/>
+                        <outlet property="switchButton" destination="QIV-aN-Qdi" id="YHo-cn-jzp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
