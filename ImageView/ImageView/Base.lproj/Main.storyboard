@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dxh-Da-geq">
+                                <rect key="frame" x="87" y="135" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="ACN-qc-EQa"/>
+                                    <constraint firstAttribute="height" constant="128" id="eat-mp-mDL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD5-F9-qbr">
+                                <rect key="frame" x="170" y="389" width="74" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Image 1"/>
+                                <connections>
+                                    <action selector="image1Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FoF-iC-FjR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbO-rW-PPw">
+                                <rect key="frame" x="169" y="531" width="76" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Image 2"/>
+                                <connections>
+                                    <action selector="image2Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iye-fw-xfR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TbO-rW-PPw" firstAttribute="top" secondItem="WD5-F9-qbr" secondAttribute="bottom" constant="111" id="35G-5T-Kdj"/>
+                            <constraint firstItem="dxh-Da-geq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8He-sO-zcv"/>
+                            <constraint firstItem="WD5-F9-qbr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gKb-9E-4Yj"/>
+                            <constraint firstItem="dxh-Da-geq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="iAs-ll-zwA"/>
+                            <constraint firstItem="WD5-F9-qbr" firstAttribute="top" secondItem="dxh-Da-geq" secondAttribute="bottom" constant="126" id="uIo-ud-Z1n"/>
+                            <constraint firstItem="TbO-rW-PPw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uLi-Q8-VAd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="dxh-Da-geq" id="f2G-Gh-UCd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
